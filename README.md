@@ -50,3 +50,4 @@ After completing the LED driver's electric circuit, the Multi-Channel method was
 
 The last page of the electrical schematic is the most complex one, encapsulating the majority of the components used in this project. This page has been divided into regions for easy reading and understanding of the circuits, as can be seen in the image below.
 
+![Main](images/MainSCH.png)
