@@ -51,3 +51,7 @@ After completing the LED driver's electric circuit, the Multi-Channel method was
 The last page of the electrical schematic is the most complex one, encapsulating the majority of the components used in this project. This page has been divided into regions for easy reading and understanding of the circuits, as can be seen in the image below.
 
 ![Main](images/MainSCH.png)
+
+
+
+The power supply block has been outlined with a brown-colored border and placed in the bottom left corner, as it is the most important block of this project. The aim was to optimize the entire circuit as much as possible, and therefore a USB connector was chosen for powering the circuit. The configuration of this connector is relatively simple, using a USB Type-C connector, specifically the Type 2 variant, which is responsible only for power supply and not data transfer. The configuration of this connector is depicted in Figure 12 and has been placed in the top left section of the electrical schematic.
