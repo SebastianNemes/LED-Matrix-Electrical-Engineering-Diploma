@@ -10,4 +10,4 @@ The usefulness of this project is demonstrated in devices encountered daily in e
 
 ## Hardware Design
 ### Electrical Schematic!
-[image](https://github.com/SebastianNemes/LED-Matrix-Electronics-University-Diploma/assets/84568896/ab750840-9f19-4f54-856a-e1306986ef6a)
+<img src="C:\Users\SebastianNemes\Downloads\Picture1.png" alt="Alt text" title="Optional title">
