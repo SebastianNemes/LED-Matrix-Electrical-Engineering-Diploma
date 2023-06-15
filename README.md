@@ -10,4 +10,4 @@ The usefulness of this project is demonstrated in devices encountered daily in e
 
 ## Hardware Design
 ### Electrical Schematic!
-<img src="C:\Users\SebastianNemes\Downloads\Picture1.png" alt="Alt text" title="Optional title">
+<img src="C:\Users\SebastianNemes\Downloads\Picture1.png" >
