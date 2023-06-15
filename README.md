@@ -11,7 +11,7 @@ The usefulness of this project is demonstrated in devices encountered daily in e
 ## Block Diagram
 This is the block diagram of the electric cirucit presented in this project. 
 
-![Block Diagram](images/Picture1.png)
+![Block Diagram](images/Block Diagram.png)
 
 
 
