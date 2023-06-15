@@ -26,4 +26,6 @@ In this case, the receiving devices for the SPI communication are nine integrate
 ## Hardware Design
 ### Electrical Schematic
 
+Within this project, the electrical schematic was divided into three smaller schematics, each positioned on a different page. The first stage involved creating the electrical schematic of the integrated circuit responsible for controlling the LED diodes. The datasheet description of the circuit was carefully followed to correctly implement this component. The final LED driver schematic is represented in the figure below.
+
 
