@@ -9,3 +9,5 @@ For the creation of the electrical schematic and circuit board layout, Altium De
 The usefulness of this project is demonstrated in devices encountered daily in everyday life, whether it be price displays, advertising boards, smart street lighting, or LED screens. These circuits provide an advantageous alternative, as they consume low amounts of energy. While their primary purpose is to produce light, they are frequently used to enhance the appearance of a product as well.
 
 ## Hardware Design
+### Electrical Schematic!
+[image](https://github.com/SebastianNemes/LED-Matrix-Electronics-University-Diploma/assets/84568896/ab750840-9f19-4f54-856a-e1306986ef6a)
