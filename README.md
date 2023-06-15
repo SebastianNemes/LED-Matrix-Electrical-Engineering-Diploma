@@ -39,6 +39,8 @@ The power supply for this circuit is provided through a signal called 4V, which 
 On the right side of this electrical schematic, the technique of multiplying elements of the same type was used, a technique known as Multi-Channel Design. In this case, it was necessary to multiply a row of electroluminescent diodes within a specific matrix of a single LED driver. The circuit to be multiplied is represented in the figure below. 
 
 
+![LP5860](images/Diodes.png)
+
 
 
 
