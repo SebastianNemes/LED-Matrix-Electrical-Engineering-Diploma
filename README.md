@@ -1,4 +1,4 @@
-# ** LED-Matrix-Electronics-University-Diploma **
+# **LED-Matrix-Electronics-University-Diploma**
 
 
 This project was carried out to obtain a bachelor's degree in Electronics, at the Politehnica University Timisoara. The purpose of this project is to design a matrix display of light-emitting diodes, controlled through a user-oriented application. The goal is to provide the user with a comprehensive and intuitive functionality of the entire electrical panel.
