@@ -55,3 +55,16 @@ The last page of the electrical schematic is the most complex one, encapsulating
 
 
 The power supply block has been outlined with a brown-colored border and placed in the bottom left corner, as it is the most important block of this project. The aim was to optimize the entire circuit as much as possible, and therefore a USB connector was chosen for powering the circuit. The configuration of this connector is relatively simple, using a USB Type-C connector, specifically the Type 2 variant, which is responsible only for power supply and not data transfer. The configuration of this connector is depicted in the image above and has been placed in the top left section of the electrical schematic.
+
+
+![USB-C](images/USB-C.png)
+
+
+
+
+The power signal has been labeled as USBC_VBUS, a 5V signal, which is present on 4 of the pins of this connector, named A4, B9, B4, A9. The pins have been paired together because physically, these pins are placed very close to each other in order to be included on a single electrical pad. This eliminates the possibility of an error occurring between the internal connections of the component symbol and its footprint. Capacitors C5 and C6 are responsible for filtering the high voltage signal and providing protection for the power block. Resistors R26 and R27 are of great importance in this scheme.
+
+Depending on the desired application and implementation mode, the USB Type-C 2.0 connector can support 3 types of operations: DFP (Downstream-Facing Port), UFP (Upstream-Facing Port), or DRD (Dual-Role Data) [14]. In the current application, the USB connector operates as a UFP, which means it is a device that connects to another host device to consume power from it. The host device supports the transfer of currents with typical values of 1.5A or 3A. The power-consuming device requires a specific configuration to enable the transfer of one of the two variants, and this configuration is achieved through the use of two standard resistors with a value of 5.1kOhm. Figure 13 describes the connection between a host device, which serves as the power source, and the power-consuming device, along with its configuration mode.
+
+
+
