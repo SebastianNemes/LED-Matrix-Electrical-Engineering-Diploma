@@ -125,4 +125,5 @@ The only driver file developed in this project was for the integrated circuit re
 The content of this file, named LP5860.h within this project, consists of defining the internal registers and functions that manipulate these registers for the LP5860 circuit.
 
 
+![Assembly](images/LP5860.png)
 
