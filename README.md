@@ -153,15 +153,17 @@ In this project, optical inspection was carried out strictly through the use of 
 In this project, optical inspection was carried out strictly through the use of a microscope, as it involved a small-scale production with only one assembled printed circuit board. The objectives of this inspection were to identify possible short circuits, verify the positioning and soldering of all components, ensure correct orientation of components, and detect any other possible errors resulting from the production and assembly processes of the circuit.
 
 
-
+![OI](images/OI.png)
 
 
 
 The next test involved measuring voltages for the main components. Firstly, the 5V voltage of the USB connector responsible for power supply was checked, as it is the most crucial signal without which the entire circuit would not function. The 5V voltage was then verified at the input of all components that use this signal, including the DC-DC Buck converter, voltage regulator, and a pin of the wireless module connector. Once these were confirmed, the 4V voltage at the output of the Buck converter was measured, and the signal was visualized on an oscilloscope. The image depicts the switching moment of the converter from the idle state to the state of supplying the desired voltage. Unfortunately, signal oscillations can be observed, which were attempted to be mitigated by increasing the inductance value of the output coil and reducing the capacitance value of the filtering capacitors. As a result, the oscillations were attenuated to a level that does not pose a danger to the integrity of the components that rely on this signal for power supply.
 
-
+![Buck](images/Buck.png)
 
 
 Throughout the testing process, a programmable power supply was used, which allowed monitoring the current consumed by the circuit. Special attention was given to constantly monitoring the current consumption to prevent unexpectedly high values that could lead to component damage. Additionally, the temperature of the entire circuit and the heat dissipation of the components were continuously monitored. The circuit efficiently dissipates heat, as no significant changes in temperature were observed even after prolonged operation at maximum power.
 
 The final test involved verifying the specific signals of communication through the SPI interface using a digital logic analyzer produced by Saleae. This device allows visualization of communication signals through various interfaces such as SPI, I2C, UART, and more. In this case, the analyzer was configured to capture the signals specific to the SPI interface, and the result of the communication can be seen in the image below. The signals during a single write operation through the SPI interface are represented. The CLOCK and MOSI signals, described earlier in the work, can be observed. The write of a byte occurs at the rising edge of the clock signal. The MISO line remains inactive throughout since no response is expected from the slave device. The last signals are the VSYNC signal on channel 3 of the analyzer, while channels 4 and 5 represent the device selection signals. These signals are pulled low when initiating a new write operation.
+
+![SPI](images/SPI.png)
