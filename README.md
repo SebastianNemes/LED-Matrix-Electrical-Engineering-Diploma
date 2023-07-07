@@ -106,3 +106,12 @@ The electrical routing of the components followed after the completion, with LED
 
 
 ![PCB](images/PCB.png)
+
+
+### PCB Assembly
+
+The assembly of the printed circuit board in this work was carried out using an automated equipment specialized in component placement, called a pick-and-place machine (PnP). To use this machine, a program needs to be created beforehand to organize the components, their order, position on the board, orientation, component size, and so on. The manufacturer of the PnP machine provides the user with an executable program to configure the machine file.
+
+To position and solder the components, a special solder paste is used, spread over the circuit surface through a stencil. This stencil, made of a very thin metal plate, is created according to the final shape of the board, with holes for all the component pads to apply the paste onto their surfaces. The stencil and the PnP machine can be observed in the images below.
+
+
