@@ -162,3 +162,7 @@ The final test involved verifying the specific signals of communication through 
 ### Further Development
 
 I wish to continue the development and improvement of the circuit, with the goal of creating a user-friendly graphical interface. This interface would allow users to access each individual LED within the display, enabling interactive drawings or easily configurable animations. The application would be accessible on any mobile phone, and the communication between the phone and the wireless module would be established using Bluetooth technology. I want to thank Anfaengineering for financially supporting this project.
+
+
+
+![Anfaengineering](images/logo.png)
