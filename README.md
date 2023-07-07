@@ -125,5 +125,21 @@ The only driver file developed in this project was for the integrated circuit re
 The content of this file, named LP5860.h within this project, consists of defining the internal registers and functions that manipulate these registers for the LP5860 circuit.
 
 
-![Assembly](images/LP5860.png)
+![LP5860](images/LP5860.png)
+
+
+To communicate these functions with the LP5860 circuit, it was necessary to implement a new function responsible for configuring the SPI protocol based on the requirements of the LED driver. The EFR32MG22 microcontroller has a peripheral block responsible for communication with external devices called USART. This block can be configured to support various communication protocols such as UART, I2C, or SPI. Unlike a traditional microcontroller where separate lines are dedicated to each communication protocol, the EFR32MG22 incorporates them into a single block, requiring several steps to configure the communication mode. In this case, the initGPIO function, shown in Image 31 on the left side, is responsible for assigning the input/output mode to each pin of the microcontroller and naming them.
+Additionally, the function called initUSART0 is responsible for configuring the pins to enable SPI communication.
+
+After configuring the SPI port, the SPI_Write function was implemented, which transmits information through the SPI protocol in the required format by the LP5860 circuit. This format differs from the standard format presented in Chapter 2.5, SPI COMMUNICATION PROTOCOL. The information is transmitted using 10 bits plus an additional one for write or read indication, which is different from the standard 8-bit format. This difference arises from the format of register addresses, where an address is represented by 12 binary bits. To access the address of a register, it needs to be divided into 2 octets, following the rule presented in the figure below.
+
+The values written in the registers are represented in the classical manner, using 8 bits. As seen in Figure 32, after transmitting the address of a register, the desired value can be immediately transmitted. It is worth noting that there is another difference in transmitting the command compared to the SPI standard. This command byte needs to be repeated, as shown in Figure 32. Data Byte 1 and Data Byte 2 are the same variable, but without duplicating this byte, the LP5860 circuit processor rejects the communication.
+
+The most important element of the entire software system is the main file, where all the previously described functions and variables are combined. The first line of code, after initializing the variables used in this file, is the invocation of the CHIP_Init function, which is responsible for starting the EFR32MG22 microcontroller. Then, the GPIO port initialization functions and the USART block initialization functions are called, followed by a sequence of functions to initialize the LED controller. Finally, the specific function for the desired animation is invoked.
+
+Moreover, with the help of the button located on the printed circuit board, a controlled interrupt was achieved through the software code in order to switch between different digital display modes, either text information or light games. The code was structured around a state machine for more efficient operation. The transition between states is triggered by pressing the aforementioned button. The state of a flag is constantly checked to detect an interrupt and execute it as quickly as possible. All these mentioned files can be accesed within this Git repository, in the Software Code folder. The state machine diagram of the code can be observed in the image below.
+
+
+
+
 
