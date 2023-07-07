@@ -140,6 +140,6 @@ The most important element of the entire software system is the main file, where
 Moreover, with the help of the button located on the printed circuit board, a controlled interrupt was achieved through the software code in order to switch between different digital display modes, either text information or light games. The code was structured around a state machine for more efficient operation. The transition between states is triggered by pressing the aforementioned button. The state of a flag is constantly checked to detect an interrupt and execute it as quickly as possible. All these mentioned files can be accesed within this Git repository, in the Software Code folder. The state machine diagram of the code can be observed in the image below.
 
 
-![State-Machine](images/State machine for LED Matrix Diploma Project.png)
+![State-Machine](images/State_machine.png)
 
 
