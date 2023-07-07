@@ -67,4 +67,23 @@ The power signal has been labeled as USBC_VBUS, a 5V signal, which is present on
 Depending on the desired application and implementation mode, the USB Type-C 2.0 connector can support 3 types of operations: DFP (Downstream-Facing Port), UFP (Upstream-Facing Port), or DRD (Dual-Role Data) [14]. In the current application, the USB connector operates as a UFP, which means it is a device that connects to another host device to consume power from it. The host device supports the transfer of currents with typical values of 1.5A or 3A. The power-consuming device requires a specific configuration to enable the transfer of one of the two variants, and this configuration is achieved through the use of two standard resistors with a value of 5.1kOhm. Figure 13 describes the connection between a host device, which serves as the power source, and the power-consuming device, along with its configuration mode.
 
 
+![USB](images/USB.png)
+
+
+
+The 5V USBC_VBUS signal is taken by the power supply block, which is responsible for ensuring the correct power supply to all circuits used in the project. To power the BRD4182A wireless module, a standard voltage of 3.3V is required. This value does not pose a risk to the BRD4182A module, as the maximum voltage accepted by the microcontroller is 3.8V. In order to provide this 3.3V voltage, a voltage regulator circuit had to be implemented.
+
+A voltage regulator is an electronic device used to maintain a constant voltage in an electrical circuit, regardless of input voltage variations or external factors. The choice was made to use a voltage regulator produced by Microchip Technology, a component that takes in a variable voltage within the range of 4.3V to a maximum of 12V, and provides a stable output voltage of 3.3V. As it is a fixed voltage regulator, the appropriate implementation was followed based on the datasheet provided by the manufacturer.
+
+The electrical diagram proposed by the manufacturer is represented in the figure below on the left side, while on the right side, the implementation carried out within this project is depicted. The only difference from the manufacturer's suggestion is the additional inclusion of input signal filtering capacitors.
+
+Once the wireless module power supply was established, the focus shifted to ensuring and implementing a circuit responsible for powering the 9 integrated circuits that control the LED matrix. For these circuits, an accurate calculation of the total current consumed by the entire assembly was required to ensure proper power supply.
+
+After establishing the power supply current value, a Buck-type integrated circuit was chosen to provide a sufficiently high voltage and current. Thus, the integrated circuit manufactured by Diodes Incorporated, a Buck converter that provides an output voltage equal to the input voltage value and a maximum current of 2A, was selected. A voltage of 4V was desired to power both the LED drivers and the entire LED array. By adhering to the requirements specified in the manufacturer's datasheet, along with a simple mathematical calculation, the implementation of this converter was achieved within our electrical design. The mathematical calculation involved determining the value of the output resistance, R_1, with R_2 set at 100k Ohms, which is responsible for supplying the desired voltage.
+
+The final stage of the electrical schematic design involved implementing the wireless module. As specified in the previous section, the implementation of this module requires only 2 connectors, each with 40 pins, arranged in 2 rows. The pin spacing is 1.27mm, and the distance between the two connectors must be strictly maintained at 24mm.
+
+According to the datasheet provided by the manufacturer for the wireless module, each connector has a different set of signals assigned to each pin. Starting with the upper connector, it required connections to the power supply and ground plane, as well as a direct connection to the 5V signal. In addition to these connections, test points were placed to allow for monitoring and verification of various voltages applied to this connector. The implementation of this connector in the electrical schematic is depicted in the figure below.
+
+
 
