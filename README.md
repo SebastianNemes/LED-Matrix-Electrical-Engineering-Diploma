@@ -87,3 +87,17 @@ According to the datasheet provided by the manufacturer for the wireless module,
 
 
 
+![CONNS](images/conns.png)
+
+
+
+### Layout Design
+
+
+The following components were placed: the specific connectors of the wireless module, along with the circuits included in the power supply block. They were positioned on the bottom layer of the PCB (Printed Circuit Board), with the only elements on the top layer being the LED diodes. They were placed to the right of the display, with priority given to the placement of the two connectors. On a separate mechanical layer, a rectangular frame was created to simulate the position of the wireless module, in the absence of a three-dimensional model of it. Within the frame, two crosses were positioned 24 mm apart from each other, marking the center of each connector.
+
+Considering that the wireless module occupied a considerable area, the rest of the components were placed in the free space between the module connectors to reduce the overall circuit size. Obviously, the USB connector, along with the microcontroller programming connector, were positioned at the edge of the circuit for easy access. The mechanical button was placed in their vicinity. Test points were added to allow checking of the signals of interest during circuit testing. These test points consist of copper openings that allow the connection of test probes for various measurements.
+
+Four mounting holes were included in each corner of the board. These holes are of M3 type with standard dimensions, where the hole diameter is 3.2 mm, and the surrounding pad has a diameter of 7 mm. After verifying the positioning of the components and all the aforementioned elements, the shape of the printed circuit was traced on a separate layer. The resulting shape is a rectangle with a length of 16 cm and a width of 5.4 cm, with rounded corners achieved using arcs with a radius of 1 mm. The image below shows the printed circuit with the positioning of each specified element before starting the process of drawing the electrical connections.
+
+The electrical routing of the components followed after the completion, with LED diodes once again being given priority. The close proximity between each package significantly influenced the method of tracing the electrical connections. Additionally, for these connections, the most efficient use of the circuit's six electrical layers was necessary. Each electric pad of a diode had to be connected separately, requiring four individual traces for each component of this kind. The trace width was chosen as 0.125 mm to optimize the routing process. Although it is an unconventional value, considering the possibility of a very small current (10mA), this width is sufficient. The connection between the electric pad of the diodes and the trace was achieved through vias. A via with a diameter of 0.2 mm was positioned on each pad. The figure below displays all the traces for a class of components, for each layer. The final result can be observed in the image below.
