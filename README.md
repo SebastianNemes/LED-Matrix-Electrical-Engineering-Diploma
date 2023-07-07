@@ -112,6 +112,17 @@ The electrical routing of the components followed after the completion, with LED
 
 The assembly of the printed circuit board in this work was carried out using an automated equipment specialized in component placement, called a pick-and-place machine (PnP). To use this machine, a program needs to be created beforehand to organize the components, their order, position on the board, orientation, component size, and so on. The manufacturer of the PnP machine provides the user with an executable program to configure the machine file.
 
-To position and solder the components, a special solder paste is used, spread over the circuit surface through a stencil. This stencil, made of a very thin metal plate, is created according to the final shape of the board, with holes for all the component pads to apply the paste onto their surfaces. The stencil and the PnP machine can be observed in the images below.
+To position and solder the components, a special solder paste is used, spread over the circuit surface through a stencil. This stencil, made of a very thin metal plate, is created according to the final shape of the board, with holes for all the component pads to apply the paste onto their surfaces. The stencil and the PnP machine can be observed in the images below. In the end, the circuit board was placed in an oven to heat the solder paste and solder the components. Both sides of the printed circuit board were assembled using this method. The first surface to be assembled was the bottom one, which had a higher component density, followed by the top surface, where only the LED diodes were present.
+
+![Assembly](images/Assembly.png)
+
+
+### Software Development
+
+For the development and testing of the software program, the SLWSTK6021A development board, described earlier, was used along with an in-house prototype board. In this case, the prototype board includes the integrated circuit responsible for controlling the diodes, along with the LED matrix of this circuit, which consists of 66 diodes arranged in a matrix of 6 columns and 11 rows. Figure 28 illustrates the prototype circuit, representing the basic idea of the project described in this paper, which was used for the development and testing of the software program.
+The only driver file developed in this project was for the integrated circuit responsible for controlling the LED diodes, LP5860, manufactured by Texas Instruments. Texas Instruments provided its customers with a ready-to-use project to facilitate the development of applications based on this component. Unfortunately, for this particular case, the provided project was implemented for a microcontroller also made by Texas Instruments, and the communication between it and the integrated circuit responsible for controlling the LED diodes is done through the I2C communication protocol. Therefore, this example project was not helpful, but the driver file could be imported into the current project with insignificant modifications.
+
+The content of this file, named LP5860.h within this project, consists of defining the internal registers and functions that manipulate these registers for the LP5860 circuit.
+
 
 
